@@ -13,5 +13,14 @@ const inventario = [
 
 
 //1 - filter para achar produtos em stock;
-const inventarioStock = inventario.filter(item => item.emStock === true);
+
+function filtroStock () {
+    return inventario.filter(item => item.emStock === true);
+
+
+}
+const inventarioStock = filtroStock ();
 console.log(inventarioStock);
+
+
+//2 - filter para achar produtos em stock e com preços abaixo de 100 euros;
