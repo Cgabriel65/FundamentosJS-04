@@ -33,3 +33,19 @@ function filtroStockAbaixo100() {
 const inventarioStockAbaixo100 = filtroStockAbaixo100 ();
 //console.log(inventarioStockAbaixo100);
 
+
+//3 - Utilize o some para identificar se possui algum elemento sem estoque e em seguida liste quais;
+
+function someSemStock() {
+        if (inventario.some(item =>  item.emStock === false)) {
+            return inventario.filter(item => item.emStock === false)
+        } else {
+            return false
+        }
+}    
+
+
+
+const itensSemStock = someSemStock();
+console.log(itensSemStock);
+
