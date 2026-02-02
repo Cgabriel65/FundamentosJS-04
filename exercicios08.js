@@ -56,12 +56,25 @@ console.log(itensSemStock);
 //4 - map para criar lista de preços com IVA (para facilitar considere que todos os produtos pagam 23% de IVA);
 
 function mapPrecosIva () {
-    return inventario.map(item => item.preco * 1,23)
+    return inventario.map(item => item.preco * 1.23);
 }
 
 const inventarioComIva = mapPrecosIva ();
-console.log(mapPrecosIva()); 
+console.log(inventarioComIva);  
 
+
+function mapPrecosIva2 () {
+    const precosIVA = inventario.map(item => item.precoIva = item.preco * 1.23);
+    const inventario2 = []
+    inventario.forEach(function(item, index) {
+        item.precoIva = precosIVA[index];
+        inventario2.push(item);
+    })
+    return inventario2;
+}
+
+const teste = mapPrecosIva2();
+console.log(teste);
 
 
 //5 - reduce para calcular o valor total do inventário.
@@ -70,8 +83,9 @@ function valorTotalInventario () {
     return inventario.reduce((acc, item) => acc + item.preco, 0);
 }
 
+/* 
 let valorTotal = valorTotalInventario();
 console.log(valorTotal);
-
+ */
 
 
