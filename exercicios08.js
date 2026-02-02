@@ -64,3 +64,14 @@ console.log(mapPrecosIva());
 
 
 
+//5 - reduce para calcular o valor total do inventário.
+
+function valorTotalInventario () {
+    return inventario.reduce((acc, item) => acc + item.preco, 0);
+}
+
+let valorTotal = valorTotalInventario();
+console.log(valorTotal);
+
+
+
