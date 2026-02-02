@@ -20,7 +20,16 @@ function filtroStock () {
 
 }
 const inventarioStock = filtroStock ();
-console.log(inventarioStock);
+//console.log(inventarioStock);
 
 
 //2 - filter para achar produtos em stock e com preços abaixo de 100 euros;
+
+function filtroStockAbaixo100() {
+    return inventario.filter(item => item.emStock === true && item.preco < 100);
+
+}
+
+const inventarioStockAbaixo100 = filtroStockAbaixo100 ();
+//console.log(inventarioStockAbaixo100);
+
