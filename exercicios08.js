@@ -19,9 +19,11 @@ function filtroStock () {
 
 
 }
-const inventarioStock = filtroStock ();
-//console.log(inventarioStock);
 
+/*
+const inventarioStock = filtroStock ();
+console.log(inventarioStock);
+*/
 
 //2 - filter para achar produtos em stock e com preços abaixo de 100 euros;
 
@@ -30,9 +32,10 @@ function filtroStockAbaixo100() {
 
 }
 
+/*
 const inventarioStockAbaixo100 = filtroStockAbaixo100 ();
-//console.log(inventarioStockAbaixo100);
-
+console.log(inventarioStockAbaixo100);
+*/
 
 //3 - Utilize o some para identificar se possui algum elemento sem estoque e em seguida liste quais;
 
@@ -45,7 +48,19 @@ function someSemStock() {
 }    
 
 
-
+/*
 const itensSemStock = someSemStock();
 console.log(itensSemStock);
+*/
+
+//4 - map para criar lista de preços com IVA (para facilitar considere que todos os produtos pagam 23% de IVA);
+
+function mapPrecosIva () {
+    return inventario.map(item => item.preco * 1,23)
+}
+
+const inventarioComIva = mapPrecosIva ();
+console.log(mapPrecosIva()); 
+
+
 
